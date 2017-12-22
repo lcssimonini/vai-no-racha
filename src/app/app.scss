@@ -1,0 +1,177 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+* {
+    color: #1e1e1e;
+}
+
+.body {
+    background-image: linear-gradient(to bottom, #409737, #7dc055);
+}
+
+$fa-font-path: "../assets/fonts" !default; 
+@import "font-awesome"; 
+i[class^="fa-"], ion-icon[class^="fa-"] {    
+   font-family: "FontAwesome" !important;
+   width: 10vw;
+}
+
+
+
+
+.hexagono {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+.imagem1{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+.imagem2{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(http://ionicframework.com/img/docs/spengler.jpg);
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.tresMenu {
+    width: 60px;
+    height: 90px;
+    margin: -10px 20px -10px 0px;
+    cursor: pointer;
+}
+.tresMenu .imagem2 {
+    background-size: cover;
+}
+
+.tresSplashLogin {
+    width: 60px;
+    height: 90px;
+    margin: -10px 20px -10px 0px;
+}
+.tresSplashLogin .imagem2 {
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+#h3MenuNomeUsuario {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#pMenuConquistas {
+    margin-top: 0;
+}
+
+hr {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+ion-item ion-icon {
+    width: 10vw;
+}
+
+.searchbar-md .searchbar-input::-webkit-input-placeholder,
+.searchbar-ios .searchbar-input::-webkit-input-placeholder,
+.searchbar-wp .searchbar-input::-webkit-input-placeholder { 
+    font-size: 4.2vw;
+}
+
+ion-datetime {
+    font-size: 4.2vw;
+}
+
+ion-item-sliding {
+    cursor: pointer;
+    border-top: 1px solid #c8c7cc;
+}
+
+ion-item-options {
+    padding-top: 1px;
+    padding-right: 1px;
+}
+
+
+// Estilização do Loading - INÍCIO
+.divContainerLoading {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.spanMsgLoading {
+    color: #1e1e1e;
+    font-size: 1em;
+}
+
+.svgLoading {
+    height: 34px;
+    width: 34px;
+    margin-right: 20px;
+}
+
+#idHexagonLoading {
+    animation: draw-hexagonLoading 1s infinite forwards linear;
+    transform-origin: 50% 50%;
+}
+
+@keyframes draw-hexagonLoading {
+    0% {
+        stroke: #1e1e1e;
+        stroke-dasharray: 3297;
+        stroke-dashoffset: -3297;
+    }
+    50% {
+        stroke: #1e1e1e;
+        stroke-dasharray: -3297;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke: #1e1e1e;
+        stroke-dasharray: 3297;
+        stroke-dashoffset: 3297;
+    }
+}
+// Estilização do Loading - FIM

@@ -1,0 +1,84 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Vai no Racha?</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col col-4>
+
+          <div class="hexagono tresMenu" (click)="alterarImagemAvatar()">
+            <div class="imagem1">
+              <div class="imagem2"></div>
+            </div>
+          </div>
+
+        </ion-col>
+        <ion-col col-8>
+          <h3 id="h3MenuNomeUsuario"></h3>
+          <p id="pMenuConquistas">Conquistas</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <hr>
+
+    <ion-list>
+
+      <button menuClose ion-item no-lines (click)="openPage(pages[0])">
+        <ion-icon class="fa-map-marker" item-start></ion-icon>
+        Mapa
+      </button>
+
+      <button menuClose ion-item no-lines (click)="openPage(pages[2])">
+        <ion-icon class="fa-clock-o" item-start></ion-icon>
+        Rachas Marcados
+      </button>
+
+      <button menuClose ion-item no-lines (click)="openPage(pages[3])">
+        <ion-icon class="fa-futbol-o" item-start></ion-icon>
+        Marcar Racha
+      </button>
+
+      <button menuClose ion-item no-lines (click)="openPage(pages[4])">
+        <ion-icon class="fa-trophy" item-start></ion-icon>
+        Conquistas
+      </button>
+
+      <hr>
+
+      <button menuClose ion-item no-lines (click)="tapEvent()">
+        <ion-icon class="fa-share-alt" item-start></ion-icon>
+        Compartilhar
+      </button>
+
+      <button menuClose ion-item no-lines (click)="openPage(pages[5])">
+        <ion-icon class="fa-cog" item-start></ion-icon>
+        Configurações
+      </button>
+
+      <button menuClose ion-item no-lines (click)="openPage(pages[7])">
+        <ion-icon class="fa-user-circle-o" item-start></ion-icon>
+        Sobre
+      </button>
+
+      <button menuClose ion-item no-lines (click)="openPage(pages[8])">
+        <ion-icon class="fa-sign-out" item-start></ion-icon>
+        Logout
+      </button>
+
+      <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button> -->
+    </ion-list>
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

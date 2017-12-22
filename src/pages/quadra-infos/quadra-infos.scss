@@ -1,0 +1,40 @@
+page-quadra-infos {
+
+}
+
+.clickEndereco {
+    cursor: pointer;
+}
+
+hr {
+    margin: 1px;
+}
+
+.pDias {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.itemDias {
+    background-color: transparent;
+    margin-top: -15px;
+}
+
+.quadraAberta, .quadraFechada {
+    text-align: center;
+}
+
+.quadraAberta ion-icon, .quadraFechada ion-icon {
+    margin-left: -8px;
+}
+
+.spanDiasSemana {
+    font-size: 4vw;
+    margin-left: -5px;
+}
+.quadraAberta ion-icon, .quadraAberta .spanDiasSemana {
+    color: #488aff;
+}
+.quadraFechada ion-icon, .quadraFechada .spanDiasSemana {
+    color: #f53d3d;
+}

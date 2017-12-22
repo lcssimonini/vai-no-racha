@@ -1,0 +1,248 @@
+page-splash {
+    
+}
+
+#bodySplash {
+    background-color: #FFFFFF;
+    position: relative;
+    animation: body-animation 8s forwards linear;
+}
+@keyframes body-animation {
+    0% {
+        
+    }
+    93% { // 7,44s
+        background-color: #FFFFFF;
+    }
+    100% { // 8s
+        background-color: #1e1e1e;
+    }
+}
+
+#Layer_3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 130px;
+    max-height: 130px;
+    animation: svg-animation 8s forwards linear;
+}
+@keyframes svg-animation {
+    0% {
+        top: 50%;
+    }
+    71% { // 5,68s
+        top: 50%;
+    }
+    87.5% { // 7s
+        top: 30%;
+    }
+    100% { // 8s
+        top: 30%;
+    }
+}
+
+#background,.letter {
+    transform-origin: 50% 50%;
+    opacity: 1;
+}
+
+#background {
+    animation: background-animation 8s forwards linear;
+    fill: #1e1e1e; // #1e1e1e
+}
+
+@keyframes background-animation {
+    0% {
+
+    }
+    71% { // 5,68s
+        transform: scale(1,1);
+    }
+    76.5% { // 6,12s
+        transform: scale(1.1,1.1);
+        opacity: 1;
+    }
+    82% { // 6,56s
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    87.5% { // 7s
+        transform: scale(1.1,1.1);
+        opacity: 1;
+    }
+    93% { // 7,44s
+        fill: #1e1e1e; // #1e1e1e
+    }
+    100% { // 8s
+        transform: scale(1.1,1.1);
+        opacity: 1;
+        fill: #FFFFFF;
+    }
+}
+
+.letter {
+    animation: letter-animation 8s forwards linear;
+}
+
+@keyframes letter-animation {
+    0% {
+        fill: transparent;
+    }
+    55% { // 4,4s
+        fill: transparent;
+    }
+    62% { // 4,96s
+        fill: #FFFFFF;
+    }
+    93% { // 7,44s
+        fill: #FFFFFF;
+    }
+    100% { // 8s
+        fill: #1e1e1e;
+    }
+}
+
+.classCircle {
+    stroke-dasharray: 3023;
+    stroke-dashoffset: -3023;
+    animation: circle-animation 6s forwards ease-in-out;
+    -ms-transform: scale(6, 3); /* IE 9 */
+    -webkit-transform: scale(6, 3); /* Safari */
+    transform: scale(6, 3);
+    transform-origin: 50% 50%;
+    fill: #FFFFFF;
+}
+
+@keyframes circle-animation {
+    0% {
+        -ms-transform: scale(0, 0); /* IE 9 */
+        -webkit-transform: scale(0, 0); /* Safari */
+        transform: scale(0, 0);
+    }
+    15% { // 0,9s
+        -ms-transform: scale(0, 0); /* IE 9 */
+        -webkit-transform: scale(0, 0); /* Safari */
+        transform: scale(0, 0);
+    }
+    83% { // 4,98s
+        -ms-transform: scale(7, 3); /* IE 9 */
+        -webkit-transform: scale(7, 3); /* Safari */
+        transform: scale(7, 3);
+    }
+}
+
+#hexagon-1 {
+    animation: draw-hexagon-1 6s forwards linear;
+    transform-origin: 50% 50%;
+}
+
+@keyframes draw-hexagon-1 {
+    0% {
+        stroke: #1e1e1e;
+        stroke-dasharray: 3297;
+        stroke-dashoffset: -3297;
+    }
+    33% { // 1,98s
+        stroke: #1e1e1e;
+        stroke-dasharray: -3297;
+        stroke-dashoffset: 0;
+    }
+    99.9% { // 5,94s
+        stroke: #1e1e1e;
+    }
+    100% { // 6s
+       stroke: transparent;
+    }
+}
+
+
+
+
+
+#divDadosUsuarioLogado-Splash {
+    top: 45%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    height: 0px;
+    visibility: visible;
+}
+
+@keyframes splash-animation-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.divImg-Nome-Splash {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #FFFFFF;
+    padding: 10px 0;
+    min-width: 240px;
+}
+
+#imgUser-Splash {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#spanNomeUsuario-Splash {
+    color: #fff;
+    font-size: 1.3em;
+    max-width: 160px;
+}
+
+#divContainerLoading-Splash {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+#spanMsgLoading-Splash {
+    color: #fff;
+    font-size: 1em;
+    
+}
+
+#svgLoading-Splash {
+    height: 34px;
+    width: 34px;
+    margin-right: 20px;
+}
+
+#hexagonLoading-Splash {
+    animation: draw-hexagonLoading-Splash 1s infinite forwards linear;
+    transform-origin: 50% 50%;
+}
+
+@keyframes draw-hexagonLoading-Splash {
+    0% {
+        stroke: #FFFFFF;
+        stroke-dasharray: 3297;
+        stroke-dashoffset: -3297;
+    }
+    50% {
+        stroke: #FFFFFF;
+        stroke-dasharray: -3297;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke: #FFFFFF;
+        stroke-dasharray: 3297;
+        stroke-dashoffset: 3297;
+    }
+}

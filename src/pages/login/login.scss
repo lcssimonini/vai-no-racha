@@ -1,0 +1,269 @@
+.bodyLogin {
+    background-color: #1e1e1e;
+    position: relative;
+}
+
+#svgLogin {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 130px;
+    max-height: 130px;
+}
+
+#svgLogin_background,.svgLogin_letter {
+    transform-origin: 50% 50%;
+    opacity: 1;
+}
+
+#svgLogin_background {
+    fill: #FFFFFF;
+    transform: scale(1.1,1.1);
+}
+
+.svgLogin_letter {
+    fill: #1e1e1e;
+}
+
+.login {
+    max-width: 280px;
+    top: 45%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    animation: login-animation-in 1s ease-in-out;
+    opacity: 1;
+    height: 0px;
+    visibility: visible;
+}
+@keyframes login-animation-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes login-animation-out {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.login-form {
+    padding: 8px 20px 20px;
+    width: 100%;
+}
+
+.svgLogin {
+    // background-color: lightcoral;
+}
+
+.username-row {
+    position: relative;
+    height: 40px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.password-row {
+    position: relative;
+    height: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+.user-icon, .password-icon {
+    margin-right: 10px;
+}
+
+.user-icon .user-path,
+.password-icon .key-path{
+    fill: rgba(10,10,10,0);
+    stroke: #FFF;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    -webkit-animation: dash 1s .3s linear forwards;
+    animation: dash 1s .3s linear forwards;
+}
+
+.inputLogin {
+    position: absolute;
+    width: 180px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.input:focus,
+.logar:focus {
+    outline: none;
+}
+
+.input::-webkit-input-placeholder {
+    color: rgba(255,255,255,.4);
+}
+
+.input::-moz-placeholder {
+    color: rgba(255,255,255,.4);
+}
+
+.user-icon .user-path {
+    -webkit-animation: dash 1s .3s linear forwards;
+    animation: dash 1s .3s linear forwards;
+}
+
+.call-to-action {
+    margin: 22px 0;
+    height: 130px;
+    width: 100%;
+}
+
+.pLogin {
+    display: inline-block;
+    width: 250px;
+    font-size: .9em;
+    color: rgba(255,255,255,.4);
+    text-align: center;
+    margin-left: -3%;
+}
+
+.pLogin span {
+    margin-left: 10PX;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.logar {
+    display: block;
+    width: 240px;
+    height: 40px;
+    padding: 0;
+    font-weight: 700;
+    color: #fff;
+    background-color: #22c08a;
+    border: none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.logar:hover {
+    background-color: #26d69a;
+}
+
+.logar:active {
+    background-color: #1eaa7a;
+}
+
+.sumirDadosUsuarioLogado {
+    opacity: 0;
+}
+
+.aparecerDadosUsuarioLogado {
+    animation: dadosUser-animation 1s ease-in-out;
+    opacity: 1;
+    padding: 8px 20px 20px;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    text-align: left;
+}
+@keyframes dadosUser-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.divImg-Nome {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid #FFFFFF;
+    padding: 10px 0;
+}
+
+#spanNomeUsuario {
+    color: #fff;
+    font-size: 1.3em;
+    max-width: 160px;
+}
+
+#divContainerLoading {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+@keyframes divContainerLoading-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#spanMsgLoading {
+    color: #fff;
+    font-size: 1em;
+}
+
+#svgLoading {
+    height: 34px;
+    width: 34px;
+    margin-right: 20px;
+}
+
+#hexagonLoading {
+    animation: draw-hexagonLoadingLogin 1s infinite forwards linear;
+    transform-origin: 50% 50%;
+}
+
+@keyframes draw-hexagonLoadingLogin {
+    0% {
+        stroke: #FFFFFF;
+        stroke-dasharray: 3297;
+        stroke-dashoffset: -3297;
+    }
+    50% {
+        stroke: #FFFFFF;
+        stroke-dasharray: -3297;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke: #FFFFFF;
+        stroke-dasharray: 3297;
+        stroke-dashoffset: 3297;
+    }
+}

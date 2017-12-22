@@ -1,0 +1,88 @@
+<ion-content class="bodyLogin">
+
+  <svg id="svgLogin" xmlns="http://www.w3.org/2000/svg" viewBox="140 0 910 1190">
+    <style>
+      .st2 {
+        fill: none;
+        stroke-width: 40;
+        stroke-miterlimit: 10;
+      }
+    </style>
+
+    <path id="svgLogin_background" mask="url(#mask)" d="M570.2 87.3L163.8 322c-15.6 9-25.2 25.6-25.2 43.6v469.3c0 18 9.6 34.6 25.2 43.6l406.4 234.7c15.6 9 34.7 9 50.3 0l406.4-234.7c15.6-9 25.2-25.6 25.2-43.6V365.6c0-18-9.6-34.6-25.2-43.6L620.5 87.3c-15.5-8.9-34.7-8.9-50.3 0z"
+    />
+
+    <path class="svgLogin_letter" mask="url(#mask)" d="m 860.87221,442.20457 q 0,10.112 -1.6854,20.224 l -5.8986,33.70667 H 389.82167 l 26.96529,-151.68 h 345.49335 q 42.976,0 70.7839,27.808 27.808,27.808 27.808,69.94133 z m -15.168,96.064 q -4.2134,26.12267 -42.9759,58.98671 22.752,28.6506 22.752,50.5599 0,4.2134 0,8.4267 l -34.5494,193.81326 H 639.25106 l 34.5493,-193.81326 h -160.1067 l -34.5493,193.81326 H 327.46437 l 54.7733,-311.78657 z"
+    />
+
+    <path id="svgLogin_hexagon-1" stroke="transparent" class="st2" d="M570.1 82.5L163.7 317.2c-15.6 9-25.2 25.6-25.2 43.6v469.3c0 18 9.6 34.6 25.2 43.6l406.4 234.7c15.6 9 34.7 9 50.3 0l406.4-234.7c15.6-9 25.2-25.6 25.2-43.6V360.8c0-18-9.6-34.6-25.2-43.6L620.4 82.5c-15.5-8.9-34.7-8.9-50.3 0z"
+    />
+
+  </svg>
+
+  <div class="login">
+    <div id="idLogin-form" class="login-form">
+      <div class="username-row row">
+        <label>
+          <svg version="1.1" class="user-icon" x="0px" y="0px" viewBox="-255 327 100 100" xml:space="preserve" height="36px" width="30px">
+            <path class="user-path" d="
+              M-203.7,350.3c-6.8,0-12.4,6.2-12.4,13.8c0,4.5,2.4,8.6,5.4,11.1c0,0,2.2,1.6,1.9,3.7c-0.2,1.3-1.7,2.8-2.4,2.8c-0.7,0-6.2,0-6.2,0
+              c-6.8,0-12.3,5.6-12.3,12.3v2.9v14.6c0,0.8,0.7,1.5,1.5,1.5h10.5h1h13.1h13.1h1h10.6c0.8,0,1.5-0.7,1.5-1.5v-14.6v-2.9
+              c0-6.8-5.6-12.3-12.3-12.3c0,0-5.5,0-6.2,0c-0.8,0-2.3-1.6-2.4-2.8c-0.4-2.1,1.9-3.7,1.9-3.7c2.9-2.5,5.4-6.5,5.4-11.1
+              C-191.3,356.5-196.9,350.3-203.7,350.3L-203.7,350.3z" />
+          </svg>
+        </label>
+        <ion-input clearInput class="inputLogin" value="" [(ngModel)]="userData.user" placeholder="Usuario"></ion-input>
+      </div>
+      <div class="password-row row">
+        <label>
+          <svg version="1.1" class="password-icon" x="0px" y="0px" viewBox="-255 327 100 100" height="36px" width="30px">
+            <path class="key-path" d="M-191.5,347.8c-11.9,0-21.6,9.7-21.6,21.6c0,4,1.1,7.8,3.1,11.1l-26.5,26.2l-0.9,10h10.6l3.8-5.7l6.1-1.1
+              l1.6-6.7l7.1-0.3l0.6-7.2l7.2-6.6c2.8,1.3,5.8,2,9.1,2c11.9,0,21.6-9.7,21.6-21.6C-169.9,357.4-179.6,347.8-191.5,347.8z"
+            />
+          </svg>
+        </label>
+        <ion-input clearInput class="inputLogin" type="password" value="" [(ngModel)]="userData.senha" placeholder="Senha"></ion-input>
+      </div>
+      <div class="call-to-action">
+        <button class="logar" (click)="login()">ENTRAR</button>
+        <p class="pLogin">Ainda não tem conta?
+          <span (click)="tapEvent()">CADASTRAR-SE</span>
+        </p>
+      </div>
+    </div>
+
+    <div id="divDadosUsuarioLogado" class="sumirDadosUsuarioLogado">
+      <div class="divImg-Nome">
+        <div class="hexagono tresSplashLogin">
+          <div class="imagem1">
+            <div class="imagem2"></div>
+          </div>
+        </div>
+        <span id="spanNomeUsuario"></span>
+      </div>
+
+      <div id="divContainerLoading">
+        <svg id="svgLoading" xmlns="http://www.w3.org/2000/svg" viewBox="140 0 910 1190">
+          <style>
+            .st1 {
+              fill: transparent;
+              stroke-width: 40;
+              stroke-miterlimit: 10;
+            }
+          </style>
+
+          <path id="hexagonLoading" stroke="transparent" class="st1" d="M570.1 82.5L163.7 317.2c-15.6 9-25.2 25.6-25.2 43.6v469.3c0 18 9.6 34.6 25.2 43.6l406.4 234.7c15.6 9 34.7 9 50.3 0l406.4-234.7c15.6-9 25.2-25.6 25.2-43.6V360.8c0-18-9.6-34.6-25.2-43.6L620.4 82.5c-15.5-8.9-34.7-8.9-50.3 0z"
+          />
+
+        </svg>
+        <span id="spanMsgLoading">Carregando mapa...</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</ion-content>
